@@ -3,19 +3,81 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #000000;
+  --black-light: #292828;
+
+  --gray: #F5F5F5;
+  --gray-light: #5A5A5A;
+
+  --yellow: #FFE817;
+  --orange: #FF582A;
+
+  --blue: #3F36E1;
+  --blue-light: #3F3CE3;
+  --blue-lighter: #4132E5;
+
+  --purple: #B76BFE;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--white);
+    --foreground: var(--black-light);
+    --primary: var(--blue);
+    --primary-light: var(--blue-light);
+    --primary-lighter: var(--blue-lighter);
+    /* Link */
+    --link: var(--foreground);
+    --link-hover: var(--primary);
+    /* Input */
+    --input: var(--foreground);
+    --input-hover: var(--primary);
+    --input-label: var(--foreground);
+    --input-placeholder: var(--black-light);
+    --input-error: var(--black-light);
+    --input-success: var(--black-light);
+    --input-warning: var(--black-light);
+    --input-hint: var(--black-light);
+    --input-disabled: var(--black-light);
+    /* Button */
+    --button-primary: var(--primary);
+    --button-primary-color: var(--white);
+    --button-primary-hover: var(--primary-lighter);
+    --button-primary-disabled: var(--primary-lighter);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.nav__link {
+  text-shadow: 0 0 0 transparent;
+
+  &:hover {
+    text-shadow: 0 0 1px var(--link-hover);
+  }
+}
+
+.btn-primary {
+  @apply bg-button-primary hover:bg-button-primary-hover;
+}
+
+.btn-primary-text {
+  @apply text-button-primary-color;
+}
+
+.btn-primary-outline {
+  @apply bg-button-primary text-button-primary-color hover:bg-button-primary-hover;
+}
+
+.section {
+  position: relative;
+}
+.section-gradient:before {
+  content: '';
+  background: linear-gradient(to right, var(--primary), var(--purple));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 330px;
+  z-index: -1;
 }

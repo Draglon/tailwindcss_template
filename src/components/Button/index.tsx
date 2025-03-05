@@ -4,7 +4,7 @@ type ButtonProps = {
   className?: string;
   textClassName?: string;
   type?: "button" | "submit" | "reset";
-  kind: 'primary' | 'secondary' | 'primary-outline';
+  kind: 'primary' | 'secondary' | 'primary-outline' | 'link';
   size?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
   children: React.ReactNode;
 };

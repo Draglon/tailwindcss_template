@@ -10,11 +10,24 @@ type InputProps = {
   kind?: 'primary' | 'primary-outline';
   label?: string;
   placeholder?: string;
+  disabled?: boolean;
   error?: string;
 };
 
-const Input = ({ label, type = "text", kind="primary", size="extra-large", className, labelClassName, inputClassName, errorClassName, placeholder, error }: InputProps) => {
-  const inputClass = clsx("w-full", {
+const Input = ({
+  label,
+  type = "text",
+  kind="primary",
+  size="extra-large",
+  className,
+  labelClassName,
+  inputClassName,
+  errorClassName,
+  placeholder,
+  disabled,
+  error,
+}: InputProps) => {
+  const inputClass = clsx("block w-full bg-white border focus:outline-none text-input text-sm font-sans", {
     "input-primary": kind === "primary",
     "input-primary-outline": kind === "primary-outline",
     "h-[32px] rounded-[2px] px-2.5": size === "extra-small",
@@ -22,6 +35,9 @@ const Input = ({ label, type = "text", kind="primary", size="extra-large", class
     "h-[45px] rounded-[3px] px-3.5": size === "medium",
     "h-[48px] rounded-[2px] px-4": size === "large",
     "h-[54px] rounded-[4px] px-7": size === "extra-large",
+    "placeholder-input-placeholder": placeholder,
+    "disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none": disabled,
+    "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500": error,
   }, inputClassName);
 
   const inputLabelClassName = clsx({

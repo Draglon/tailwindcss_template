@@ -16,7 +16,7 @@ import Section from "@/components/Section";
 
 const Main = () => {
   return (
-    <main className="main">
+    <main className="main relative">
       <section className="section h-[744px] bg-white">
         <div className="container container-xl container-lg container-md container-sm mx-auto">
           <div className="pt-[110px]">
@@ -31,9 +31,16 @@ const Main = () => {
           </div>
           <div>
             <div className="flex items-center justify-center gap-[15px]">
-              <Input className="w-[350px]" type="text" placeholder="Вакансия" size="extra-large" />
+              <Input
+                className="w-[350px]"
+                inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
+                type="text"
+                placeholder="Вакансия"
+                size="extra-large"
+              />
               <Select
                 className="w-[350px]"
+                selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
                 placeholder="Город"
                 options={[
                   { label: "Город 1", value: "1" },
@@ -71,9 +78,9 @@ const Main = () => {
                 <div className="card__right-side">
                   <header className="card__header">
                     <h3 className="card__title">Senior Software Engineer (Full Stack)</h3>
-                    <ul>
-                      <li>General VR Solutions</li>
-                      <li>Норвегия, Франфурт на Майне</li>
+                    <ul className="list">
+                      <li className="list_item">General VR Solutions</li>
+                      <li className="list_item">Норвегия, Франфурт на Майне</li>
                     </ul>
                   </header>
                   <div className="card__content">

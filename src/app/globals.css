@@ -9,6 +9,7 @@
 
   --gray: #F5F5F5;
   --gray-light: #5A5A5A;
+  --gray-dark: #3F3F3F;
 
   --yellow: #FFE817;
   --orange: #FF582A;
@@ -34,12 +35,19 @@
     --input: var(--foreground);
     --input-hover: var(--primary);
     --input-label: var(--foreground);
-    --input-placeholder: var(--black-light);
+    --input-placeholder: var(--gray-light);
     --input-error: var(--black-light);
     --input-success: var(--black-light);
     --input-warning: var(--black-light);
+    --input-danger: var(--black-light);
     --input-hint: var(--black-light);
     --input-disabled: var(--black-light);
+    /* Select */
+    --select-arrow: var(--gray-dark);
+    --select-arrow-hover: var(--primary);
+    --select-arrow-success: var(--gray-dark);
+    --select-arrow-warning: var(--gray-dark);
+    --select-arrow-danger: var(--gray-dark);
     /* Button */
     --button-primary: var(--primary);
     --button-primary-color: var(--white);
@@ -56,6 +64,7 @@
   }
 }
 
+/* =========== Button  */
 .btn-primary {
   @apply bg-button-primary hover:bg-button-primary-hover;
 }
@@ -68,9 +77,11 @@
   @apply bg-button-primary text-button-primary-color hover:bg-button-primary-hover;
 }
 
+/* =========== Section  */
 .section {
   position: relative;
 }
+
 .section-gradient:before {
   content: '';
   background: linear-gradient(to right, var(--primary), var(--purple));
@@ -80,4 +91,12 @@
   width: 100%;
   height: 330px;
   z-index: -1;
+}
+
+/* =========== Select */
+.select + .select-arrow {
+  @apply block absolute top-[50%] right-[30px] mt-[-2px] h-[6px] w-[6px] border-r border-b border-r-select border-b-select rotate-45;
+}
+.select:focus + .select-arrow {
+  @apply border-r-select-hover border-b-select-hover;
 }

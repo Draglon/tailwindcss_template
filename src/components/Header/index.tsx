@@ -6,7 +6,7 @@ import Button from "@/components/Button";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 inset-x-0 z-60 bg-white">
+    <header className="sticky top-0 inset-x-0 z-50 bg-white">
       <div className="flex items-center justify-between py-5 px-16">
         <div className="flex items-center gap-20">
           <Logo />

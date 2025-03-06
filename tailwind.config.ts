@@ -38,6 +38,10 @@ export default {
           hint: 'var(--input-hint)',
           disabled: 'var(--input-disabled)',
         },
+        select: {
+          DEFAULT: 'var(--select-arrow)',
+          hover: 'var(--select-arrow-hover)',
+        },
         button: {
           primary: {
             DEFAULT: 'var(--button-primary)',

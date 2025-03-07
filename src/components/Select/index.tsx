@@ -1,6 +1,7 @@
 "use client"
 import clsx from 'clsx';
 import { useState } from 'react';
+import { isEmpty, equals } from 'ramda';
 
 type SelectProps = {
   className?: string;
@@ -30,18 +31,22 @@ const Select = ({
   error = ""
 }: SelectProps) => {
   const [value, setValue] = useState("");
+  const isLabel = !isEmpty(label);
+  const isPlaceholder = !isEmpty(placeholder);
+  const isError = !isEmpty(error);
+  const isValue = !isEmpty(value);
 
   const selectClass = clsx("select appearance-none block w-full border focus:outline-none text-input text-sm font-sans", {
-    "select--primary": kind === "primary",
-    "select--primary-outline": kind === "primary-outline",
-    "h-[32px] rounded-[2px] px-2.5": size === "extra-small",
-    "h-[36px] rounded-[4px] px-3": size === "small",
-    "h-[45px] rounded-[3px] px-3.5": size === "medium",
-    "h-[48px] rounded-[2px] px-4": size === "large",
-    "h-[54px] rounded-[4px] px-7": size === "extra-large",
-    "text-input-placeholder": placeholder && !value,
+    "select--primary": equals(kind, "primary"),
+    "select--primary-outline": equals(kind, "primary-outline"),
+    "h-[32px] rounded-[2px] px-2.5": equals(size, "extra-small"),
+    "h-[36px] rounded-[4px] px-3": equals(size, "small"),
+    "h-[45px] rounded-[3px] px-3.5": equals(size, "medium"),
+    "h-[48px] rounded-[2px] px-4": equals(size, "large"),
+    "h-[54px] rounded-[4px] px-7": equals(size, "extra-large"),
+    "text-input-placeholder": isPlaceholder && isValue,
     "disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none": disabled,
-    "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500": error,
+    "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500": isError,
   }, selectClassName);
 
   const selectLabelClassName = clsx({
@@ -64,15 +69,15 @@ const Select = ({
 
   return (
     <div className={clsx("bg-white", className)}>
-      {label && (
+      {isLabel && (
         <label className={selectLabelClassName}>
           {label}
         </label>
       )}
       <div className="relative">
         <select className={selectClass} onChange={handleChange}>
-          {placeholder && (
-            <option hidden value="" disabled selected>
+          {isPlaceholder && (
+            <option hidden value="" defaultValue="">
               {placeholder}
             </option>
           )}
@@ -84,7 +89,7 @@ const Select = ({
         </select>
         <span className="select-arrow"></span>
       </div>
-      {error && (
+      {isError && (
         <div className={selectErrorClassName}>
           {error}
         </div>

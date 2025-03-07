@@ -9,6 +9,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        xs: '360px',
         sm: '640px',
         md: '768px',
         lg: '992px',
@@ -45,8 +46,9 @@ export default {
         button: {
           primary: {
             DEFAULT: 'var(--button-primary)',
-            color: 'var(--button-primary-color)',
             hover: 'var(--button-primary-hover)',
+            focus: 'var(--button-primary-focus)',
+            color: 'var(--button-primary-color)',
             disabled: 'var(--button-primary-disabled)',
           },
         },
@@ -62,6 +64,7 @@ export default {
       },
       fontFamily: {
         sans: ['Geometria', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       },
     },
   },

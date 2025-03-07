@@ -8,15 +8,16 @@
   --black-light: #292828;
 
   --gray: #F5F5F5;
+  --gray-lightest: rgba(246, 246, 253, 1);
   --gray-light: #5A5A5A;
   --gray-dark: #3F3F3F;
 
   --yellow: #FFE817;
   --orange: #FF582A;
 
-  --blue: #3F36E1;
-  --blue-light: #3F3CE3;
-  --blue-lighter: #4132E5;
+  --blue: rgba(63, 54, 225, 1);
+  --blue-light: rgba(63, 54, 225, .9);
+  --blue-lighter: rgba(63, 54, 225, .75);
 
   --purple: #B76BFE;
 }
@@ -50,8 +51,9 @@
     --select-arrow-danger: var(--gray-dark);
     /* Button */
     --button-primary: var(--primary);
+    --button-primary-hover: var(--primary-light);
+    --button-primary-focus: var(--primary-lighter);
     --button-primary-color: var(--white);
-    --button-primary-hover: var(--primary-lighter);
     --button-primary-disabled: var(--primary-lighter);
   }
 }
@@ -66,7 +68,9 @@
 
 /* =========== Button  */
 .btn-primary {
-  @apply bg-button-primary hover:bg-button-primary-hover;
+  @apply bg-button-primary;
+  @apply hover:bg-button-primary-hover;
+  @apply focus:bg-button-primary-focus;
 }
 
 .btn-primary-text {
@@ -74,23 +78,9 @@
 }
 
 .btn-primary-outline {
-  @apply bg-button-primary text-button-primary-color hover:bg-button-primary-hover;
-}
-
-/* =========== Section  */
-.section {
-  position: relative;
-}
-
-.section-gradient:before {
-  content: '';
-  background: linear-gradient(to right, var(--primary), var(--purple));
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 330px;
-  z-index: -1;
+  @apply bg-white border border-button-primary text-button-primary;
+  @apply hover:bg-white;
+  @apply focus:bg-white;
 }
 
 /* =========== Select */
@@ -99,4 +89,58 @@
 }
 .select:focus + .select-arrow {
   @apply border-r-select-hover border-b-select-hover;
+}
+
+/* =========== Section  */
+.section--main {
+  @apply relative bg-no-repeat bg-[url('@/assets/images/bg-section-plane.png')] bg-[615px_3px];
+  @apply before:absolute before:left-[45px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url('@/assets/images/bg-section-america.png')];
+  @apply after:absolute after:right-[0] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url('@/assets/images/bg-section-europe.png')];
+}
+.bg-man {
+  @apply before:absolute before:top-[-100px] before:right-[-73px] before:w-[158px] before:h-[146px] before:bg-no-repeat before:bg-[url('@/assets/images/bg-section-man.png')];
+  @apply after:absolute after:top-[25px] after:right-[-225px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url('@/assets/images/bg-section-plane-right.png')];
+}
+.section--gradient {
+  @apply relative pt-[60px] md:pt-[70px] lg:pt-[90px];
+  @apply before:absolute before:block before:top-0 before:left-0 before:w-full before:h-[330px] before:bg-gradient-to-r before:from-primary before:to-purple;
+  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url('@/assets/images/bg-section.png')] after:bg-[top_center] after:bg-no-repeat;
+}
+
+.section__header, .section__footer {
+  @apply text-center;
+}
+
+/* =========== Cards  */
+.cards {
+  @apply grid gap-[14px] mb-[30px];
+  @apply md:gap-[20px];
+  @apply lg:grid-cols-2 lg:gap-[30px];
+}
+.card {
+  @apply bg-white rounded-[4px] p-[30px] flex gap-[16px] transition-shadow duration-300 shadow-[0px_0px_22px_rgba(0,0,0,0.07)];
+  @apply hover:shadow-[0px_0px_22px_rgba(189,203,231,1)];
+}
+.card__item {
+  @apply first:w-[50px] first:h-[50px] rounded-full;
+}
+.card__header {
+  
+}
+.card__content {
+
+}
+.section__nav {
+  @apply flex gap-[12px] mb-[18px];
+  @apply md:mb-[25px];
+  @apply xl:gap-[12px] xl:mb-[20px];
+}
+.card__title {
+
+}
+.card__text {
+
+}
+.card__footer {
+  @apply text-right;
 }

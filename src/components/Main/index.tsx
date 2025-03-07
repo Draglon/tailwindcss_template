@@ -17,65 +17,65 @@ import Section from "@/components/Section";
 const Main = () => {
   return (
     <main className="main relative">
-      <section className="section h-[744px] bg-white">
+      <section className="section section--main h-[660px] bg-white">
         <div className="container container-xl container-lg container-md container-sm mx-auto">
-          <div className="pt-[110px]">
+          <header className="pt-[110px]">
             <h1 className="text-center text-5xl font-bold mb-8">
-              <span className="text-primary block">Найди вакансию</span>
+              <span className="text-primary inline-block relative bg-man">Найди вакансию</span>
               <span className="block">и город своей мечты</span>
             </h1>
             <p className="text-center text-lg font-light mb-11">
               <span className="block">Как подготовить себя и семью к переезду, что нужно знать о жизни</span>
               <span className="block">в новом городе, как подготовится к собеседованию</span>
             </p>
-          </div>
-          <div>
-            <div className="flex items-center justify-center gap-[15px]">
-              <Input
-                className="w-[350px]"
-                inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
-                type="text"
-                placeholder="Вакансия"
-                size="extra-large"
-              />
-              <Select
-                className="w-[350px]"
-                selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
-                placeholder="Город"
-                options={[
-                  { label: "Город 1", value: "1" },
-                  { label: "Город 2", value: "2" },
-                  { label: "Город 3", value: "3" },
-                ]}
-                size="extra-large"
-              />
-              <Button className="flex items-center justify-center w-[78px]" type="submit" kind="primary" size="extra-large">
-                <Image src={search} alt="search" width={18} height={18} />
-              </Button>
-            </div>
-          </div>
+          </header>
+          <form className="flex items-center justify-center gap-[15px]">
+            <Input
+              className="w-[350px]"
+              inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
+              type="text"
+              placeholder="Вакансия"
+              size="extra-large"
+            />
+            <Select
+              className="w-[350px]"
+              selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
+              placeholder="Город"
+              options={[
+                { label: "Город 1", value: "1" },
+                { label: "Город 2", value: "2" },
+                { label: "Город 3", value: "3" },
+              ]}
+              size="extra-large"
+            />
+            <Button className="flex items-center justify-center w-[78px]" type="submit" kind="primary" size="extra-large">
+              <Image src={search} alt="search" width={18} height={18} />
+            </Button>
+          </form>
         </div>
       </section>
 
       <Section
-        className="section--gradient"
+        className="section--gradient bg-white"
+        titleClassName="text-white"
+        descriptionClassName="text-white mb-[30px]"
         title="Вакансии"
         description="Вакансии, получившие больше всего откликов за неделю"
       >
         <div className="section__content">
-          <nav className="section__nav flex gap-[20px] mb-[20px]">
-            <Button className="w-[127px]" kind="primary" size="small">Горящие</Button>
-            <Button className="w-[127px]" kind="primary" size="small">Новые</Button>
+          <nav className="section__nav">
+            <Button className="w-[100px] xl:w-[127px]" kind="primary" size="small">Горящие</Button>
+            <Button className="w-[100px] xl:w-[127px]" kind="primary" size="small">Новые</Button>
           </nav>
           <section className="cards">
             {[1,2,3,4].map((_, index) => (
               <article className="card" key={index}>
-                <div className="card__left-side">
+                <div className="card__item">
                   <div className="card__image">
                     <Image src={rubyLogoUrl} alt="Company name logo" width="49" height="49" />
                   </div>
                 </div>
-                <div className="card__right-side">
+                <div className="card__item">
                   <header className="card__header">
                     <h3 className="card__title">Senior Software Engineer (Full Stack)</h3>
                     <ul className="list">
@@ -89,7 +89,7 @@ const Main = () => {
                     </p>
                   </div>
                   <footer className="card__footer">
-                    <Button kind="primary-outline">
+                    <Button className="font-roboto uppercase min-w-[96px] xl:min-w-[110px]" kind="primary-outline" size="extra-small">
                       Подробнее
                     </Button>
                   </footer>
@@ -97,8 +97,8 @@ const Main = () => {
               </article>
             ))}
           </section>
-          <footer className="section__footer">
-            <Button kind="primary-outline">
+          <footer className="section__footer mb-[60px]">
+            <Button className="min-w-[252px]" kind="primary-outline" size="large">
               Найти больше вакансий
             </Button>
           </footer>
@@ -125,7 +125,7 @@ const Main = () => {
                   <p className="card__text">785 открытых вакансий</p>
                 </div>
                 <footer className="card__footer">
-                  <Button kind="primary-outline">
+                  <Button className="uppercase min-w-[110px]" kind="primary-outline" size="extra-small">
                     Подробнее
                   </Button>
                 </footer>
@@ -134,7 +134,7 @@ const Main = () => {
           ))}
         </section>
         <footer className="section__footer">
-          <Button kind="primary-outline">
+          <Button className="min-w-[252px]" kind="primary-outline" size="large">
             Все города
           </Button>
         </footer>
@@ -165,7 +165,7 @@ const Main = () => {
           ))}
         </section>
         <footer className="section__footer">
-          <Button kind="primary-outline">
+          <Button className="min-w-[252px]" kind="primary-outline" size="large">
             Узнать больше
           </Button>
         </footer>
@@ -198,7 +198,7 @@ const Main = () => {
           ))}
         </section>
         <footer className="section__footer">
-          <Button kind="primary-outline">
+          <Button className="min-w-[252px]" kind="primary-outline" size="large">
             Читать все статьи
           </Button>
         </footer>
@@ -257,7 +257,7 @@ const Main = () => {
           </div>
         </div>
         <footer className="section__footer">
-          <Button kind="primary-outline">
+          <Button className="min-w-[252px]" kind="primary-outline" size="large">
             Читать все отзывы
           </Button>
         </footer>

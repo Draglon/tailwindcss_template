@@ -5,16 +5,23 @@ import SectionHeader from "@/components/Section/Header";
 
 type SectionProps = {
   className?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
   title: string;
   description?: string;
   children: ReactNode;
 };
 
-const Section = ({ className, title, description, children}: SectionProps) => {
+const Section = ({ className, titleClassName, descriptionClassName, title, description, children}: SectionProps) => {
   return (
     <section className={clsx("section", className)}>
-      <div className="container container-xl container-lg container-md container-sm mx-auto">
-        <SectionHeader title={title} description={description} />
+      <div className="container container-xl container-lg container-md container-sm mx-auto relative">
+        <SectionHeader
+          title={title}
+          titleClassName={titleClassName}
+          description={description}
+          descriptionClassName={descriptionClassName}
+        />
         {children}
       </div>
     </section>

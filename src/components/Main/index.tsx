@@ -18,13 +18,13 @@ const Main = () => {
   return (
     <main className="main relative">
       <section className="section section--main h-[660px] bg-white">
-        <div className="container container-xl container-lg container-md container-sm mx-auto">
+        <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative z-20">
           <header className="pt-[155px]">
             <h1 className="text-center text-5xl/[54.35px] font-bold mb-[27px]">
               <span className="text-primary inline-block relative bg-man indent-[-18px]">Найди вакансию</span>
               <span className="block indent-[-19px]">и город своей мечты</span>
             </h1>
-            <p className="text-center text-lg/[26px] font-light indent-[-26px] mb-[38px]">
+            <p className="text-center text-lg/[26px] font-light indent-[-18px] mb-[38px]">
               <span className="block">Как подготовить себя и семью к переезду, что нужно знать о жизни</span>
               <span className="block">в новом городе, как подготовится к собеседованию</span>
             </p>
@@ -48,7 +48,7 @@ const Main = () => {
               ]}
               size="extra-large"
             />
-            <Button className="flex items-center justify-center w-[77.8px]" type="submit" kind="primary" size="extra-large">
+            <Button className="w-[77.8px] flex justify-center items-center" type="submit" kind="primary" size="extra-large">
               <Image src={search} alt="search" className="mr-[1px]" />
             </Button>
           </form>

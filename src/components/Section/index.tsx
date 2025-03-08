@@ -15,7 +15,7 @@ type SectionProps = {
 const Section = ({ className, titleClassName, descriptionClassName, title, description, children}: SectionProps) => {
   return (
     <section className={clsx("section", className)}>
-      <div className="container container-xl container-lg container-md container-sm mx-auto relative">
+      <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative">
         <SectionHeader
           title={title}
           titleClassName={titleClassName}

@@ -1,10 +1,16 @@
 import Image from "next/image";
+import clsx from "clsx";
 
-import logo from "@/assets/images/logo.svg";
+type LogoProps = {
+  className?: string;
+  src: string;
+}
 
-const Logo = () => {
+const Logo = ({ className, src }: LogoProps) => {
   return (
-    <Image src={logo} alt="logo" width={127} height={17} />
+    <div className={clsx("logo", className)}>
+      <Image className="logo__img" src={src} alt="logo" width={127} height={17} />
+    </div>
   );
 }
 

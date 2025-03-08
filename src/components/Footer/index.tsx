@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import logoUrl from "@/assets/images/logo_white.svg";
 import Logo from "@/components/Logo";
 import Button from "@/components/Button";
 
@@ -7,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
       <div className="">
-        <Logo />
+        <Logo src={logoUrl} />
         <div>
           <div>
             <h3>Aitrelocate</h3>

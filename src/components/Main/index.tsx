@@ -19,26 +19,26 @@ const Main = () => {
     <main className="main relative">
       <section className="section section--main h-[660px] bg-white">
         <div className="container container-xl container-lg container-md container-sm mx-auto">
-          <header className="pt-[110px]">
-            <h1 className="text-center text-5xl font-bold mb-8">
-              <span className="text-primary inline-block relative bg-man">Найди вакансию</span>
-              <span className="block">и город своей мечты</span>
+          <header className="pt-[155px]">
+            <h1 className="text-center text-5xl/[54.35px] font-bold mb-[27px]">
+              <span className="text-primary inline-block relative bg-man indent-[-18px]">Найди вакансию</span>
+              <span className="block indent-[-19px]">и город своей мечты</span>
             </h1>
-            <p className="text-center text-lg font-light mb-11">
+            <p className="text-center text-lg/[26px] font-light indent-[-26px] mb-[38px]">
               <span className="block">Как подготовить себя и семью к переезду, что нужно знать о жизни</span>
               <span className="block">в новом городе, как подготовится к собеседованию</span>
             </p>
           </header>
-          <form className="flex items-center justify-center gap-[15px]">
+          <form className="flex items-center justify-center gap-[15px] pr-[12px]">
             <Input
-              className="w-[350px]"
+              className="w-[356.6px]"
               inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               type="text"
               placeholder="Вакансия"
               size="extra-large"
             />
             <Select
-              className="w-[350px]"
+              className="w-[280.5px]"
               selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               placeholder="Город"
               options={[
@@ -48,8 +48,8 @@ const Main = () => {
               ]}
               size="extra-large"
             />
-            <Button className="flex items-center justify-center w-[78px]" type="submit" kind="primary" size="extra-large">
-              <Image src={search} alt="search" width={18} height={18} />
+            <Button className="flex items-center justify-center w-[77.8px]" type="submit" kind="primary" size="extra-large">
+              <Image src={search} alt="search" className="mr-[1px]" />
             </Button>
           </form>
         </div>

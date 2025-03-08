@@ -20,7 +20,7 @@ const Button = ({ children, type = "button", kind, size, className, textClassNam
     "h-[54px] rounded-[5px] px-4.5": size === "extra-large",
   }, className);
 
-  const buttonTextClassName = clsx({
+  const buttonTextClassName = clsx("font-medium", {
     "btn-primary-text": kind === "primary",
     "btn-primary-outline-text": kind === "primary-outline",
     "text-[11px]": size === "extra-small",

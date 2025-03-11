@@ -43,7 +43,7 @@ const Select = ({
     "h-[36px] rounded-[4px] px-3": equals(size, "small"),
     "h-[45px] rounded-[3px] px-3.5": equals(size, "medium"),
     "h-[48px] rounded-[2px] px-4": equals(size, "large"),
-    "h-[54px] rounded-[4px] px-7": equals(size, "extra-large"),
+    "h-[54px] rounded-[4px] px-[30px]": equals(size, "extra-large"),
     "text-input-placeholder": isPlaceholder && isValue,
     "disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none": disabled,
     "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500": isError,

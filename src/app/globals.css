@@ -86,17 +86,67 @@
 .select:focus + .select-arrow {
   @apply border-r-select-hover border-b-select-hover;
 }
+/* =========== Header  */
+.header {
+  @apply sticky top-0 inset-x-0 z-50 bg-white h-[52px];
+  /* @apply md:h-[84px]; */
+}
+.header__wrapper {
+  @apply flex items-center justify-between pt-[14px] pl-[17px] pr-[17px];
+  /* @apply xl:pt-[19px] xl:pb-[20px] xl:pl-[65px] xl:pr-[59px]; */
+}
+
+/* =========== Hamburger menu */
+.logo {
+  @apply pt-[4px];
+}
+.logo__image {
+
+}
+
+/* =========== Hamburger menu */
+.hamburger-menu {
+  @apply relative z-10;
+}
+.hamburger-menu__btn {
+  @apply flex justify-center items-center cursor-pointer w-[34px] h-[24px] relative z-30;
+}
+.hamburger-menu__btn-lines {
+  @apply block relative bg-primary h-[3px] w-[30px] rounded-full;
+  @apply before:absolute before:left-0 before:top-[-9px] before:bg-primary before:h-[3px] before:w-[30px] before:rounded-full;
+  @apply after:absolute after:left-0 after:bottom-[-9px] after:bg-primary after:h-[3px] after:w-[30px] after:rounded-full;
+}
+.hamburger-menu__checkbox {
+  @apply hidden;
+}
+.hamburger-menu__checkbox:checked + .hamburger-menu__mobile {
+  @apply block lg:hidden;
+}
+.hamburger-menu__mobile {
+  @apply hidden;
+}
+.mobile-nav {
+  @apply fixed top-0 left-0 right-0 bottom-0 z-20;
+}
 
 /* =========== Section  */
 .section--main {
   @apply relative bg-no-repeat;
   @apply relative xl:bg-[url(@/assets/images/bg-section-plane.png)] xl:bg-[614px_50px];
-  @apply before:absolute before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-america.png)];
-  @apply after:absolute after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-europe.png)];
+  /* Before */
+  @apply before:absolute before:hidden;
+  @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-america.png)];
+  /* After */
+  @apply after:absolute after:hidden xl:block;
+  @apply after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-europe.png)];
 }
 .bg-man {
-  @apply before:absolute before:top-[-100px] before:right-[-69px] before:w-[158px] before:h-[146px] before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-man.png)];
-  @apply after:absolute after:top-[24px] after:right-[-220px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-plane-right.png)];
+  @apply relative;
+  /* Before */
+  @apply before:absolute before:top-[-100px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover;
+  @apply before:xl:top-[-100px] before:xl:right-[-69px] before:xl:w-[158px] before:xl:h-[146px] xl:before:bg-[url(@/assets/images/bg-section-man.png)];
+  /* After */
+  @apply after:hidden after:xl:block after:absolute after:top-[24px] after:right-[-220px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-plane-right.png)];
 }
 .section--gradient {
   @apply relative pt-[60px] md:pt-[70px] lg:pt-[90px];

@@ -13,21 +13,24 @@ import Button from "@/components/Button";
 import Input from "@/components/Input";
 import Select from "@/components/Select";
 import Section from "@/components/Section";
+import Title from "@/components/Title";
+import Text from "@/components/Text";
+import Paragraph from "@/components/Paragraph";
 
 const Main = () => {
   return (
     <main className="main relative">
       <section className="section section--main h-[660px] bg-white">
         <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative z-20">
-          <header className="pt-[155px]">
-            <h1 className="text-center text-5xl/[54.35px] font-bold mb-[27px]">
-              <span className="text-primary inline-block relative bg-man indent-[-18px]">Найди вакансию</span>
-              <span className="block indent-[-19px]">и город своей мечты</span>
-            </h1>
-            <p className="text-center text-lg/[26px] font-light indent-[-18px] mb-[38px]">
-              <span className="block">Как подготовить себя и семью к переезду, что нужно знать о жизни</span>
-              <span className="block">в новом городе, как подготовится к собеседованию</span>
-            </p>
+          <header className="pt-[158px] xl:pt-[155px]">
+            <Title className="text-center mb-[26px]">
+              <Text className="inline-block text-[27px]/[32px] xl:text-5xl/[54.35px] indent-[-2px] xl:indent-[-18px] text-primary bg-man">Найди вакансию</Text>
+              <Text className="block text-[27px]/[32px] xl:text-5xl/[56px] indent-[-2px] xl:indent-[-18px]">и город своей мечты</Text>
+            </Title>
+            <Paragraph className="text-center mb-[38px]">
+              <Text className="block xl:text-lg/[26px] indent-[-18px]">Как подготовить себя и семью к переезду, что нужно знать о жизни</Text>
+              <Text className="block xl:text-lg/[26px] indent-[-18px]">в новом городе, как подготовится к собеседованию</Text>
+            </Paragraph>
           </header>
           <form className="flex items-center justify-center gap-[15px] pr-[12px]">
             <Input
@@ -56,7 +59,7 @@ const Main = () => {
       </section>
 
       <Section
-        className="section--gradient bg-white"
+        className="section--gradient bg-white hidden"
         titleClassName="text-white"
         descriptionClassName="text-white mb-[30px]"
         title="Вакансии"
@@ -77,16 +80,20 @@ const Main = () => {
                 </div>
                 <div className="card__item">
                   <header className="card__header">
-                    <h3 className="card__title">Senior Software Engineer (Full Stack)</h3>
+                    <Title className="card__title" level={3}>Senior Software Engineer (Full Stack)</Title>
                     <ul className="list">
-                      <li className="list_item">General VR Solutions</li>
-                      <li className="list_item">Норвегия, Франфурт на Майне</li>
+                      <li className="list_item">
+                        <Text>General VR Solutions</Text>
+                      </li>
+                      <li className="list_item">
+                        <Text>Норвегия, Франфурт на Майне</Text>
+                      </li>
                     </ul>
                   </header>
                   <div className="card__content">
-                    <p className="card__text">
+                    <Paragraph className="card__text">
                       Our trading platform is loaded with features. Our easy-to-use interface, quick funding options...
-                    </p>
+                    </Paragraph>
                   </div>
                   <footer className="card__footer">
                     <Button className="font-roboto uppercase min-w-[96px] xl:min-w-[110px]" kind="primary-outline" size="extra-small">
@@ -106,6 +113,7 @@ const Main = () => {
       </Section>
 
       <Section
+        className="bg-white hidden"
         title="Узнай все о городе своей мечты"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -141,7 +149,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="section--gradient"
+        className="section--gradient hidden"
         title="Всё о релокейте"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -172,6 +180,7 @@ const Main = () => {
       </Section>
 
       <Section
+        className="hidden"
         title="Блог"
         description="Наши эксперты помогут вам своими лучшими статьями"
       >
@@ -205,6 +214,7 @@ const Main = () => {
       </Section>
 
       <Section
+        className="hidden"
         title="Хочешь получать лучшие статьи от Aitrelocate раз в неделю?"
         description="Подпишись на рассылку Aitrelocate"
       >
@@ -222,7 +232,10 @@ const Main = () => {
         </div>
       </Section>
 
-      <Section title="Что о нас говорят">
+      <Section
+        className="hidden"
+        title="Что о нас говорят"
+      >
         <div className="slider">
           <a className="slider__arrow slider__arrow--left" role="button" />
           <a className="slider__arrow slider__arrow--right" role="button" />

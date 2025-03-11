@@ -9,7 +9,7 @@ type LogoProps = {
 const Logo = ({ className, src }: LogoProps) => {
   return (
     <div className={clsx("logo", className)}>
-      <Image className="logo__img" src={src} alt="logo" width={127} height={17} />
+      <Image className="logo__img block h-[15xp] w-[118px]" src={src} alt="logo" />
     </div>
   );
 }

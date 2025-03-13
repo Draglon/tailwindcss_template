@@ -20,28 +20,27 @@ import Paragraph from "@/components/Paragraph";
 const Main = () => {
   return (
     <main className="main relative">
-      <section className="section section--main h-[660px] bg-white">
+      <section className="section section--main bg-white h-[600px] xl:h-[660px]">
         <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative z-20">
-          <header className="pt-[158px] xl:pt-[155px]">
-            <Title className="text-center mb-[26px]">
-              <Text className="inline-block text-[27px]/[32px] xl:text-5xl/[54.35px] indent-[-2px] xl:indent-[-18px] text-primary bg-man">Найди вакансию</Text>
-              <Text className="block text-[27px]/[32px] xl:text-5xl/[56px] indent-[-2px] xl:indent-[-18px]">и город своей мечты</Text>
+          <header className="pt-[158px] xl:pt-[155px] mb-[22px]">
+            <Title className="text-center mb-[11px] xl:mb-[26px]">
+              <Text className="inline-block text-primary bg-man text-[27px]/[32px] indent-[-2px] xl:text-5xl/[54.35px] xl:indent-[-18px]">Найди вакансию</Text>
+              <Text className="block text-[27px]/[32px] indent-[-2px]">и город своей мечты</Text>
             </Title>
-            <Paragraph className="text-center mb-[38px]">
-              <Text className="block xl:text-lg/[26px] indent-[-18px]">Как подготовить себя и семью к переезду, что нужно знать о жизни</Text>
-              <Text className="block xl:text-lg/[26px] indent-[-18px]">в новом городе, как подготовится к собеседованию</Text>
+            <Paragraph className="text-center">
+              <Text className="inline-block text-sm/[136%] xl:text-lg/[26px] xl:indent-[-18px]">Как подготовить себя и семью к переезду, <span className="block" />что нужно знать о жизни в новом городе, как подготовится к собеседованию</Text>
             </Paragraph>
           </header>
-          <form className="flex items-center justify-center gap-[15px] pr-[12px]">
+          <form className="flex flex-col xl:flex-row xl:items-center xl:justify-center xl:gap-[15px] xl:pr-[12px]">
             <Input
-              className="w-[356.6px]"
+              className="mb-[8px] xl:mb-0 xl:w-[356.6px]"
               inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               type="text"
               placeholder="Вакансия"
               size="extra-large"
             />
             <Select
-              className="w-[280.5px]"
+              className="mb-[16px] xl:mb-0 xl:w-[280.5px]"
               selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               placeholder="Город"
               options={[
@@ -51,7 +50,7 @@ const Main = () => {
               ]}
               size="extra-large"
             />
-            <Button className="w-[77.8px] flex justify-center items-center" type="submit" kind="primary" size="extra-large">
+            <Button className="flex justify-center items-center m-auto w-[200px] xl:w-[77.8px]" type="submit" kind="primary" size="extra-large">
               <Image src={search} alt="search" className="mr-[1px]" />
             </Button>
           </form>
@@ -59,7 +58,8 @@ const Main = () => {
       </section>
 
       <Section
-        className="section--gradient bg-white hidden"
+        className="section--gradient bg-grey-lightest"
+        headerClassName="xl:mb-[30px]"
         titleClassName="text-white"
         descriptionClassName="text-white mb-[30px]"
         title="Вакансии"
@@ -113,7 +113,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="bg-white hidden"
+        className="bg-grey-lightest"
         title="Узнай все о городе своей мечты"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -149,7 +149,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="section--gradient hidden"
+        className="section--gradient bg-grey-lightest"
         title="Всё о релокейте"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -180,7 +180,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="hidden"
+        className=""
         title="Блог"
         description="Наши эксперты помогут вам своими лучшими статьями"
       >
@@ -214,7 +214,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="hidden"
+        className=""
         title="Хочешь получать лучшие статьи от Aitrelocate раз в неделю?"
         description="Подпишись на рассылку Aitrelocate"
       >
@@ -233,7 +233,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="hidden"
+        className="bg-grey-lightest"
         title="Что о нас говорят"
       >
         <div className="slider">

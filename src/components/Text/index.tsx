@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 type TextProps = {
   className?: string;
-  children: string;
+  children: string | React.ReactNode;
 }
 
 const Text = ({ className, children }: TextProps) => {

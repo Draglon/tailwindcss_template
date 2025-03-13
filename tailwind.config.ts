@@ -52,6 +52,17 @@ export default {
             disabled: 'var(--button-primary-disabled)',
           },
         },
+        black: {
+          DEFAULT: 'var(--black)',
+          light: 'var(--black-light)',
+          dark: 'var(--black-dark)',
+        },
+        grey: {
+          DEFAULT: 'var(--gray)',
+          lightest: 'var(--gray-lightest)',
+          light: 'var(--gray-light)',
+          dark: 'var(--gray-dark)',
+        },
         yellow: {
           DEFAULT: 'var(--yellow)',
         },

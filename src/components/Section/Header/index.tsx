@@ -1,15 +1,16 @@
 import clsx from "clsx";
 
 type SectionHeaderProps = {
+  headerClassName?: string; 
   title: string;
   titleClassName?: string;
   description?: string;
   descriptionClassName?: string;
 };
 
-const SectionHeader = ({ title, titleClassName, description, descriptionClassName}: SectionHeaderProps) => {
+const SectionHeader = ({ headerClassName, title, titleClassName, description, descriptionClassName}: SectionHeaderProps) => {
   return (
-    <header className="section__header mb-[30px]">
+    <header className={clsx("section__header", headerClassName)}>
       <h2 className={clsx("text-3xl font-bold mb-[10px]", titleClassName)}>
         {title}
       </h2>

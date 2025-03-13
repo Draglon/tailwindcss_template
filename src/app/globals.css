@@ -6,11 +6,13 @@
   --white: #ffffff;
   --black: #000000;
   --black-light: #292828;
+  --black-dark: #181818;
 
   --gray: #F5F5F5;
   --gray-lightest: rgba(246, 246, 253, 1);
   --gray-light: #5A5A5A;
   --gray-dark: #3F3F3F;
+  
 
   --yellow: #FFE817;
   --orange: #FF582A;
@@ -80,12 +82,13 @@
 }
 
 /* =========== Select */
-.select + .select-arrow {
-  @apply block absolute top-[50%] right-[32px] mt-[-4px] h-[6px] w-[6px] border-r border-b border-r-select border-b-select rotate-45;
+.select-arrow {
+  @apply block absolute top-[50%] right-[25px] xl:right-[32px] mt-[-5px] xl:mt-[-4px] h-[6px] w-[6px] border-r border-b border-r-select border-b-select rotate-45;
 }
 .select:focus + .select-arrow {
   @apply border-r-select-hover border-b-select-hover;
 }
+
 /* =========== Header  */
 .header {
   @apply sticky top-0 inset-x-0 z-50 bg-white h-[52px];
@@ -94,14 +97,6 @@
 .header__wrapper {
   @apply flex items-center justify-between pt-[14px] pl-[17px] pr-[17px];
   /* @apply xl:pt-[19px] xl:pb-[20px] xl:pl-[65px] xl:pr-[59px]; */
-}
-
-/* =========== Hamburger menu */
-.logo {
-  @apply pt-[4px];
-}
-.logo__image {
-
 }
 
 /* =========== Hamburger menu */
@@ -129,10 +124,18 @@
   @apply fixed top-0 left-0 right-0 bottom-0 z-20;
 }
 
+/* =========== Footer  */
+.footer {
+  @apply bg-black-dark text-center;
+}
+.footer__wrapper {
+  @apply container pt-[58px] pl-[25px] pr-[25px] pb-[38px];
+}
+
 /* =========== Section  */
 .section--main {
-  @apply relative bg-no-repeat;
-  @apply relative xl:bg-[url(@/assets/images/bg-section-plane.png)] xl:bg-[614px_50px];
+  @apply relative bg-[url(@/assets/images/sm/bg-section-plane.png)] bg-no-repeat bg-[56px_85px];
+  /* @apply xl:bg-[url(@/assets/images/bg-section-plane.png)] xl:bg-[614px_50px]; */
   /* Before */
   @apply before:absolute before:hidden;
   @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-america.png)];
@@ -143,17 +146,20 @@
 .bg-man {
   @apply relative;
   /* Before */
-  @apply before:absolute before:top-[-100px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover;
-  @apply before:xl:top-[-100px] before:xl:right-[-69px] before:xl:w-[158px] before:xl:h-[146px] xl:before:bg-[url(@/assets/images/bg-section-man.png)];
+  @apply before:absolute before:top-[-101px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover;
+  /* @apply before:xl:top-[-100px] before:xl:right-[-69px] before:xl:w-[158px] before:xl:h-[146px] xl:before:bg-[url(@/assets/images/bg-section-man.png)]; */
   /* After */
-  @apply after:hidden after:xl:block after:absolute after:top-[24px] after:right-[-220px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-plane-right.png)];
+  @apply after:hidden;
+  /* @apply after:xl:block after:absolute after:top-[24px] after:right-[-220px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-plane-right.png)]; */
 }
 .section--gradient {
   @apply relative pt-[60px] md:pt-[70px] lg:pt-[90px];
   @apply before:absolute before:block before:top-0 before:left-0 before:w-full before:h-[330px] before:bg-gradient-to-r before:from-primary before:to-purple;
   @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/bg-section.png)] after:bg-[top_center] after:bg-no-repeat;
 }
-
+.section__wrapper {
+  @apply relative container mx-auto px-[15px];
+}
 .section__header, .section__footer {
   @apply text-center;
 }

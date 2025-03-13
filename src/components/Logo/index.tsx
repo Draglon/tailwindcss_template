@@ -1,5 +1,4 @@
 import Image from "next/image";
-import clsx from "clsx";
 
 type LogoProps = {
   className?: string;
@@ -8,8 +7,8 @@ type LogoProps = {
 
 const Logo = ({ className, src }: LogoProps) => {
   return (
-    <div className={clsx("logo", className)}>
-      <Image className="logo__img block h-[15xp] w-[118px]" src={src} alt="logo" />
+    <div className={className}>
+      <Image className="block w-full h-full" src={src} alt="logo" />
     </div>
   );
 }

@@ -6,7 +6,7 @@ type ButtonProps = {
   type?: "button" | "submit" | "reset";
   kind: 'primary' | 'secondary' | 'primary-outline' | 'link';
   size?: 'extra-small' | 'small' | 'medium' | 'large' | 'extra-large';
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 const Button = ({ children, type = "button", kind, size, className, textClassName }: ButtonProps) => {
@@ -30,7 +30,7 @@ const Button = ({ children, type = "button", kind, size, className, textClassNam
 
   return (
     <button type={type} className={buttonClass}>
-      <span className={buttonTextClassName}>{children}</span>
+      {children && <span className={buttonTextClassName}>{children}</span>}
     </button>
   );
 }

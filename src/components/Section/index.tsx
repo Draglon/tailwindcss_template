@@ -5,6 +5,7 @@ import SectionHeader from "@/components/Section/Header";
 
 type SectionProps = {
   className?: string;
+  headerClassName?: string;
   titleClassName?: string;
   descriptionClassName?: string;
   title: string;
@@ -12,11 +13,12 @@ type SectionProps = {
   children: ReactNode;
 };
 
-const Section = ({ className, titleClassName, descriptionClassName, title, description, children}: SectionProps) => {
+const Section = ({ className, headerClassName, titleClassName, descriptionClassName, title, description, children}: SectionProps) => {
   return (
     <section className={clsx("section", className)}>
-      <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative">
+      <div className="section__wrapper">
         <SectionHeader
+          headerClassName={headerClassName}
           title={title}
           titleClassName={titleClassName}
           description={description}

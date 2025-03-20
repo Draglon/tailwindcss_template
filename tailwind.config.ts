@@ -9,14 +9,13 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: '360px',
+        xs: '361px',
         sm: '640px',
         md: '768px',
         lg: '992px',
         xl: '1280px',
       },
       colors: {
-        transparent: 'transparent',
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {

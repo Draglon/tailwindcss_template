@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import search from "@/assets/images/icons/search.svg";
 import iconBridgeUrl from "@/assets/images/icons/bridge.svg";
 // import iconBridgeActiveUrl from "@/assets/images/icons/bridge_active.svg";
 import photoUrl from "@/assets/images/photo_1.png";
@@ -51,24 +50,29 @@ const Main = () => {
               size="extra-large"
             />
             <Button className="flex justify-center items-center m-auto w-[200px] xl:w-[77.8px]" type="submit" kind="primary" size="extra-large">
-              <Image src={search} alt="search" className="mr-[1px]" />
+              <i className="icon icon-search text-white text-[18px] block mt-2px"></i>
             </Button>
           </form>
         </div>
       </section>
 
       <Section
-        className="section--gradient bg-grey-lightest"
+        className="section--gradient bg-grey-lightest pt-[51px]"
         headerClassName="xl:mb-[30px]"
         titleClassName="text-white"
-        descriptionClassName="text-white mb-[30px]"
+        descriptionClassName="text-white mb-[29px]"
         title="Вакансии"
-        description="Вакансии, получившие больше всего откликов за неделю"
+        description={<>Вакансии, получившие больше всего<br className="block" /> откликов за неделю</>}
       >
         <div className="section__content">
-          <nav className="section__nav">
-            <Button className="w-[100px] xl:w-[127px]" kind="primary" size="small">Горящие</Button>
-            <Button className="w-[100px] xl:w-[127px]" kind="primary" size="small">Новые</Button>
+          <nav className="section__nav flex justify-center">
+            <Button className="w-[101px] xl:w-[127px]" textClassName="flex pt-[3px] inline-block" kind="warning" size="small">
+              <i className="icon icon-fire text-[12px] ml-[2px] mr-[6px]"></i>
+              Горящие
+            </Button>
+            <Button className="w-[101px] xl:w-[127px]" kind="secondary" size="small">
+              Новые
+            </Button>
           </nav>
           <section className="cards">
             {[1,2,3,4].map((_, index) => (
@@ -80,18 +84,18 @@ const Main = () => {
                 </div>
                 <div className="card__item">
                   <header className="card__header">
-                    <Title className="card__title" level={3}>Senior Software Engineer (Full Stack)</Title>
+                    <Title className="card__title text-sm/[146%] text-[#3A3A3A]" level={3}>Senior Software Engineer (Full Stack)</Title>
                     <ul className="list">
                       <li className="list_item">
-                        <Text>General VR Solutions</Text>
+                        <Text className="text-xs/[138%] text-[#454545]"><i className="icon icon-city inline-block text-[14px] text-[#AEAEAE] text-center mr-[8px] w-[16px] h-[16px]"/>General VR Solutions</Text>
                       </li>
                       <li className="list_item">
-                        <Text>Норвегия, Франфурт на Майне</Text>
+                        <Text className="text-xs/[138%] text-[#454545]"><i className="icon icon-location inline-block text-[14px] text-[#AEAEAE] text-center mr-[8px] w-[16px] h-[16px]"/>Норвегия, Франфурт на Майне</Text>
                       </li>
                     </ul>
                   </header>
                   <div className="card__content">
-                    <Paragraph className="card__text">
+                    <Paragraph className="card__text text-xs/[151%] text-[#474747]">
                       Our trading platform is loaded with features. Our easy-to-use interface, quick funding options...
                     </Paragraph>
                   </div>

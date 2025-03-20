@@ -9,7 +9,7 @@ type SectionProps = {
   titleClassName?: string;
   descriptionClassName?: string;
   title: string;
-  description?: string;
+  description?: string | React.ReactNode;
   children: ReactNode;
 };
 

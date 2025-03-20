@@ -60,6 +60,75 @@
   }
 }
 
+/* Icomoon */
+/* @font-face {
+  font-family: 'icomoon';
+  src:  url('./font/icomoon/icomoon.eot?h041pi');
+  src:  url('./font/icomoon/icomoon.eot?h041pi#iefix') format('embedded-opentype'),
+    url('./font/icomoon/icomoon.ttf?h041pi') format('truetype'),
+    url('./font/icomoon/icomoon.woff?h041pi') format('woff'),
+    url('./font/icomoon/icomoon.svg?h041pi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+} */
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-paper-plane:before {
+  content: "\e901";
+}
+.icon-fire:before {
+  content: "\e902";
+}
+.icon-arrow-left:before {
+  content: "\e903";
+}
+.icon-arrow-right:before {
+  content: "\e904";
+}
+.icon-instagram:before {
+  content: "\e905";
+}
+.icon-twitter:before {
+  content: "\e906";
+}
+.icon-vk:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-mark:before {
+  content: "\e909";
+}
+.icon-mark-full:before {
+  content: "\e90a";
+}
+.icon-city:before {
+  content: "\e90b";
+}
+.icon-location:before {
+  content: "\e90c";
+}
+
+
 .nav__link.active {
   @apply font-medium text-link-hover indent-[1px];
 }
@@ -79,6 +148,21 @@
   @apply bg-white border border-button-primary text-button-primary;
   @apply hover:bg-white;
   @apply focus:bg-white;
+}
+
+.btn-warning {
+  @apply bg-orange relative;
+  @apply after:absolute after:top-[100%] after:left-[17px] after:w-[0] after:h-[0] after:border-t-[4px] after:border-r-[3px] after:border-l-[3px] after:border-b-0 after:border-r-transparent after:border-l-transparent after:border-t-orange;
+}
+.btn-warning-text {
+  @apply text-white;
+}
+
+.btn-secondary {
+  @apply bg-white;
+}
+.btn-secondary-text {
+  @apply text-primary;
 }
 
 /* =========== Select */
@@ -153,9 +237,9 @@
   /* @apply after:xl:block after:absolute after:top-[24px] after:right-[-220px] after:w-[178px] after:h-[79px] after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-plane-right.png)]; */
 }
 .section--gradient {
-  @apply relative pt-[60px] md:pt-[70px] lg:pt-[90px];
+  @apply relative;
   @apply before:absolute before:block before:top-0 before:left-0 before:w-full before:h-[330px] before:bg-gradient-to-r before:from-primary before:to-purple;
-  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/bg-section.png)] after:bg-[top_center] after:bg-no-repeat;
+  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/xs/bg-section.png)] after:sm:bg-[url(@/assets/images/bg-section.png)] after:bg-[top_center] after:bg-no-repeat;
 }
 .section__wrapper {
   @apply relative container mx-auto px-[15px];

@@ -33,13 +33,23 @@ const geometria = localFont({
   ],
 })
 
+const icomoon = localFont({
+  src: [
+    {
+      path: './font/icomoon/icomoon.woff',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${roboto.className} ${geometria.className}`}>
+    <html lang="en" className={`${roboto.className} ${geometria.className} ${icomoon.className}`}>
       <body className="bg-background text-foreground text-base font-sans font-normal not-italic antialiased dark">
         {children}
       </body>

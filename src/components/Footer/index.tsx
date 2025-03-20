@@ -48,10 +48,26 @@ const Footer = () => {
           <div className="">
             <h4 className="text-left text-white text-[13px]/[100%] xl:text-[14px]/[100%] font-bold opacity-90 mb-[16px]">Присоединяйтесь к нам<br className="hidden md:block"/>в социальных сетях:</h4>
             <ul className="flex justify-center gap-[30px]">
-              <li><Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">F</Link></li>
-              <li><Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">T</Link></li>
-              <li><Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">T</Link></li>
-              <li><Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">I</Link></li>
+              <li>
+                <Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">
+                  <i className="icon icon-facebook"/>
+                </Link>
+              </li>
+              <li>
+                <Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">
+                  <i className="icon icon-vk"/>
+                </Link>
+              </li>
+              <li>
+                <Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">
+                  <i className="icon icon-twitter"/>
+                </Link>
+              </li>
+              <li>
+                <Link className="flex justify-center items-center bg-white rounded-full w-[39px] h-[39px]" href="#">
+                  <i className="icon icon-instagram"/>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

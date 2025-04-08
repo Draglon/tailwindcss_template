@@ -1,4 +1,5 @@
 import Image from "next/image";
+import clsx from "clsx";
 
 import iconBridgeUrl from "@/assets/images/icons/bridge.svg";
 // import iconBridgeActiveUrl from "@/assets/images/icons/bridge_active.svg";
@@ -75,8 +76,9 @@ const Main = () => {
             </Button>
           </nav>
           <section className="cards">
-            {[1,2,3,4].map((_, index) => (
+            {[{ active: true }, { active: false }, { active: false }, { active: false }].map((item, index) => (
               <article className="card" key={index}>
+                <i className={clsx("card__mark icon", { "icon-mark-full": item.active, "icon-mark": !item.active })} />
                 <div className="card__item">
                   <div className="card__image">
                     <Image src={rubyLogoUrl} alt="Company name logo" width="49" height="49" />
@@ -122,7 +124,7 @@ const Main = () => {
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
         <section className="cards">
-          {[1,2,3,4].map((_, index) => (
+          {[{ active: true }, { active: false }, { active: false }, { active: false }].map((item, index) => (
             <article className="card" key={index}>
               <div className="card__item">
                 <div className="card__image">

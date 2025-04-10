@@ -42,7 +42,6 @@ const Footer = () => {
             <h4 className="text-left text-white text-[14px]/[100%] xl:text-[14px]/[100%] font-bold opacity-90">Свяжитесь с нами</h4>
             <div className="">
               <input type="email" placeholder="Ваш email" />
-              {/* <Button className="bg-[url(@/assets/images/icons/send.svg)] bg-[center_center] bg-no-repeat w-[53px]" type="submit" kind="primary" size="medium" /> */}
             </div>
           </div>
           <div className="">

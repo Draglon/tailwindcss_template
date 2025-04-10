@@ -218,19 +218,19 @@
 
 /* =========== Section  */
 .section--main {
-  @apply relative bg-[url(@/assets/images/sm/bg-section-plane.png)] bg-no-repeat bg-[56px_85px];
+  /* @apply relative bg-[url(@/assets/images/sm/bg-section-plane.png)] bg-no-repeat bg-[56px_85px]; */
   /* @apply xl:bg-[url(@/assets/images/bg-section-plane.png)] xl:bg-[614px_50px]; */
   /* Before */
   @apply before:absolute before:hidden;
-  @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-america.png)];
+  /* @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/bg-section-america.png)]; */
   /* After */
   @apply after:absolute after:hidden xl:block;
-  @apply after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-europe.png)];
+  /* @apply after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url(@/assets/images/bg-section-europe.png)]; */
 }
 .bg-man {
   @apply relative;
   /* Before */
-  @apply before:absolute before:top-[-101px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover;
+  /* @apply before:absolute before:top-[-101px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover; */
   /* @apply before:xl:top-[-100px] before:xl:right-[-69px] before:xl:w-[158px] before:xl:h-[146px] xl:before:bg-[url(@/assets/images/bg-section-man.png)]; */
   /* After */
   @apply after:hidden;
@@ -239,7 +239,7 @@
 .section--gradient {
   @apply relative;
   @apply before:absolute before:block before:top-0 before:left-0 before:w-full before:h-[330px] before:bg-gradient-to-r before:from-primary before:to-purple;
-  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/xs/bg-section.png)] after:sm:bg-[url(@/assets/images/bg-section.png)] after:bg-[top_center] after:bg-no-repeat;
+  /* @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/xs/bg-section.png)] after:sm:bg-[url(@/assets/images/bg-section.png)] after:bg-[top_center] after:bg-no-repeat; */
 }
 .section__wrapper {
   @apply relative container mx-auto px-[15px];

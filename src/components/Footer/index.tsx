@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import logoUrl from "@/assets/images/logo_white.svg";
+import logoUrl from "@/../public/images/logo_white.svg";
 import Logo from "@/components/Logo";
 // import Button from "@/components/Button";
 

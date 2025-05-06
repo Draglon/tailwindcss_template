@@ -1,13 +1,13 @@
 import Image from "next/image";
 import clsx from "clsx";
 
-import iconBridgeUrl from "@/assets/images/icons/bridge.svg";
-// import iconBridgeActiveUrl from "@/assets/images/icons/bridge_active.svg";
-import photoUrl from "@/assets/images/photo_1.png";
-import rubyLogoUrl from "@/assets/images/photo_2.png";
-import image_1 from "@/assets/images/image_1.png";
-import image_2 from "@/assets/images/image_2.png";
-import image_3 from "@/assets/images/image_3.png";
+import iconBridgeUrl from "@/../public/images/icons/bridge.svg";
+// import iconBridgeActiveUrl from "@/../public/images/icons/bridge_active.svg";
+import photoUrl from "@/../public/images/photo_1.png";
+import rubyLogoUrl from "@/../public/images/photo_2.png";
+import image_1 from "@/../public/images/image_1.png";
+import image_2 from "@/../public/images/image_2.png";
+import image_3 from "@/../public/images/image_3.png";
 
 import Button from "@/components/Button";
 import Input from "@/components/Input";

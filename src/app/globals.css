@@ -206,33 +206,33 @@
 
 /* =========== Section  */
 .section--main {
-  @apply relative bg-[url(@/assets/images/sm/bg-section-plane.png)] bg-no-repeat bg-[56px_85px];
-  @apply md:bg-[url(@/assets/images/md/bg-section-plane.png)] md:bg-[121px_14px];
-  @apply lg:bg-[url(@/assets/images/lg/bg-section-plane.png)] lg:bg-[614px_50px];
-  @apply xl:bg-[url(@/assets/images/xl/bg-section-plane.png)] xl:bg-[121px_14px];
+  @apply relative bg-[url('/images/sm/bg-section-plane.png')] bg-no-repeat bg-[56px_85px];
+  @apply md:bg-[url('/images/md/bg-section-plane.png')] md:bg-[121px_14px];
+  @apply lg:bg-[url('/images/lg/bg-section-plane.png')] lg:bg-[614px_50px];
+  @apply xl:bg-[url('/images/xl/bg-section-plane.png')] xl:bg-[121px_14px];
   /* Before */
   @apply before:absolute before:hidden;
-  @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url(@/assets/images/xl/bg-section-america.png)];
+  @apply before:left-[44px] before:bottom-[46px] before:w-[555px] before:h-[566px] before:z-10 before:bg-no-repeat before:bg-[url('/images/xl/bg-section-america.png')];
   /* After */
   @apply after:absolute after:hidden 2xl:block;
-  @apply after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url(@/assets/images/xl/bg-section-europe.png)];
+  @apply after:right-[1px] after:bottom-[0] after:w-[629px] after:h-[597px] after:z-10 after:bg-no-repeat after:bg-[url('/images/xl/bg-section-europe.png')];
 }
 
 .bg-man {
   @apply relative;
   /* Before */
-  @apply before:absolute before:top-[-101px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url(@/assets/images/sm/bg-section-man.png)] before:bg-no-repeat before:bg-cover;
-  @apply before:md:top-[-103px] before:md:right-[-59px] before:md:w-[158px] before:md:h-[146px] md:before:bg-[url(@/assets/images/md/bg-section-man.png)];
-  @apply before:2xl:top-[-100px] before:2xl:right-[-69px] before:2xl:w-[158px] before:2xl:h-[146px] 2xl:before:bg-[url(@/assets/images/xl/bg-section-man.png)];
+  @apply before:absolute before:top-[-101px] before:right-[-45px] before:w-[158px] before:h-[146px] before:bg-[url('/images/sm/bg-section-man.png')] before:bg-no-repeat before:bg-cover;
+  @apply before:md:top-[-103px] before:md:right-[-59px] before:md:w-[158px] before:md:h-[146px] md:before:bg-[url('/images/md/bg-section-man.png')];
+  @apply before:2xl:top-[-100px] before:2xl:right-[-69px] before:2xl:w-[158px] before:2xl:h-[146px] 2xl:before:bg-[url('/images/xl/bg-section-man.png')];
   /* After */
   @apply after:hidden;
-  @apply after:md:block after:absolute after:top-[-34px] after:right-[-231px] after:w-[176.8px] after:h-[78px] after:bg-no-repeat after:bg-[url(@/assets/images/md/bg-section-plane-right.png)];
-  @apply after:2xl:block after:2xl:top-[24px] after:2xl:right-[-220px] after:2xl:w-[178px] after:2xl:h-[79px] after:2xl:bg-[url(@/assets/images/xl/bg-section-plane-right.png)];
+  @apply after:md:block after:absolute after:top-[-34px] after:right-[-231px] after:w-[176.8px] after:h-[78px] after:bg-no-repeat after:bg-[url('/images/md/bg-section-plane-right.png')];
+  @apply after:2xl:block after:2xl:top-[24px] after:2xl:right-[-220px] after:2xl:w-[178px] after:2xl:h-[79px] after:2xl:bg-[url('/images/xl/bg-section-plane-right.png')];
 }
 .section--gradient {
   @apply relative;
   @apply before:absolute before:block before:top-0 before:left-0 before:w-full before:h-[330px] before:bg-gradient-to-r before:from-primary before:to-purple;
-  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url(@/assets/images/xs/bg-section.png)] after:md:bg-[url(@/assets/images/xl/bg-section.png)] after:bg-[top_center] after:bg-no-repeat;
+  @apply after:absolute after:block after:top-0 after:left-0 after:w-full after:h-[330px] after:bg-[url('/images/xs/bg-section.png')] after:md:bg-[url('/images/xl/bg-section.png')] after:bg-[top_center] after:bg-no-repeat;
 }
 .section__wrapper {
   @apply relative container mx-auto px-[15px];

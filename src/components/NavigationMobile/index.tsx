@@ -2,7 +2,7 @@ import Link from "@/components/Link";
 
 const NavigationMobile = () => {
   return (
-    <div className="hamburger-menu">
+    <div className="hamburger-menu lg:hidden">
       <label className="hamburger-menu__btn" htmlFor="menu__toggle">
         <span className="hamburger-menu__btn-lines"></span>
       </label>

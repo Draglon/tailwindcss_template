@@ -8,7 +8,7 @@ type LogoProps = {
 const Logo = ({ className, src }: LogoProps) => {
   return (
     <div className={className}>
-      <Image className="block w-full h-full" src={src} alt="logo" />
+      <Image className="block pt-[4px] md:w-[137px] md:pt-[8px]" src={src} alt="logo" />
     </div>
   );
 }

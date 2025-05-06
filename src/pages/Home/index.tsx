@@ -4,7 +4,7 @@ import Main from "@/components/Main";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen relative mx-auto w-[360px] h-[5418px]">
+    <div className="min-h-screen relative mx-auto w-[1280px] h-[5418px]">
       <Header />
       <Main />
       <Footer />

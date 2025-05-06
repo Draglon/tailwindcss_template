@@ -1,4 +1,5 @@
-import logoUrl from "@/assets/images/logo.svg";
+import logoUrl from "@/assets/images/xs/logo.svg";
+
 import Logo from "@/components/Logo";
 import Navigation from "@/components/Navigation";
 import NavigationMobile from "@/components/NavigationMobile";

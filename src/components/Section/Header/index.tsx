@@ -15,7 +15,7 @@ const SectionHeader = ({ headerClassName, title, titleClassName, description, de
         {title}
       </h2>
       {description && (
-        <p className={clsx("text-sm/[133%] lg:text-base xl:text-lg", descriptionClassName)}>
+        <p className={clsx("text-sm/[133%] lg:text-base 2xl:text-lg", descriptionClassName)}>
           {description}
         </p>
       )}

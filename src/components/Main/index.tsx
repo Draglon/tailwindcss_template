@@ -20,27 +20,29 @@ import Paragraph from "@/components/Paragraph";
 const Main = () => {
   return (
     <main className="main relative">
-      <section className="section section--main bg-white h-[600px] xl:h-[660px]">
+      <section className="section section--main bg-white h-[600px] md:h-[512px] lg:h-[638px] 2xl:h-[660px]">
         <div className="container container-xl container-lg container-md container-sm mx-auto px-[15px] relative z-20">
-          <header className="pt-[158px] xl:pt-[155px] mb-[22px]">
-            <Title className="text-center mb-[11px] xl:mb-[26px]">
-              <Text className="inline-block text-primary bg-man text-[27px]/[32px] indent-[-2px] xl:text-5xl/[54.35px] xl:indent-[-18px]">Найди вакансию</Text>
-              <Text className="block text-[27px]/[32px] indent-[-2px]">и город своей мечты</Text>
+          <header className="pt-[158px] md:pt-[140px] lg:pt-[167px] 2xl:pt-[155px] mb-[22px] md:mb-[27px] lg:mb-[35px]">
+            <Title className="text-center mb-[11px] md:mb-[21px] lg:mb-[29px] 2xl:mb-[26px]">
+              <Text className="inline-block text-primary bg-man text-[27px]/[32px] indent-[-2px] md:text-[40px]/[100%] lg:text-[44px]/[99%] lg:indent-[1px] 2xl:text-5xl/[54.35px] 2xl:indent-[-18px]">Найди вакансию</Text>
+              <Text className="block text-[27px]/[32px] indent-[-2px] md:text-[40px]/[100%] lg:text-[44px]/[99%] lg:indent-[1px]">и&nbsp;город своей мечты</Text>
             </Title>
             <Paragraph className="text-center">
-              <Text className="inline-block text-sm/[136%] xl:text-lg/[26px] xl:indent-[-18px]">Как подготовить себя и семью к переезду, <span className="block" />что нужно знать о жизни в новом городе, как подготовится к собеседованию</Text>
+              <Text className="inline-block text-sm/[136%] md:text-[15px]/[145%] lg:text-[16px]/[145%] lg:indent-[1px] 2xl:text-lg/[26px] 2xl:indent-[-18px]">
+                Как подготовить себя и&nbsp;семью к&nbsp;переезду, <span className="block md:hidden" />что нужно знать о&nbsp;жизни<span className="hidden md:block" /> в&nbsp;новом городе, как подготовится к&nbsp;собеседованию
+              </Text>
             </Paragraph>
           </header>
-          <form className="flex flex-col xl:flex-row xl:items-center xl:justify-center xl:gap-[15px] xl:pr-[12px]">
+          <form className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-[15px] lg:w-[744.8px] lg:ml-auto lg:mr-auto">
             <Input
-              className="mb-[8px] xl:mb-0 xl:w-[356.6px]"
+              className="mb-[8px] md:mb-0 flex-[0_0_356.6px]"
               inputClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               type="text"
               placeholder="Вакансия"
               size="extra-large"
             />
             <Select
-              className="mb-[16px] xl:mb-0 xl:w-[280.5px]"
+              className="mb-[16px] md:mb-0 md:flex-[0_0_280.5px]"
               selectClassName="border-0 transition-shadow duration-300 shadow-[0px_4px_22px_rgba(0,0,0,0.07)] focus:shadow-[0px_4px_22px_rgba(189,203,231,1)]"
               placeholder="Город"
               options={[
@@ -50,8 +52,8 @@ const Main = () => {
               ]}
               size="extra-large"
             />
-            <Button className="flex justify-center items-center m-auto w-[200px] xl:w-[77.8px]" type="submit" kind="primary" size="extra-large">
-              <i className="icon icon-search text-white text-[18px] block mt-2px"></i>
+            <Button className="flex justify-center items-center m-auto flex-[0_0_200px] md:flex-[0_0_77.8px]" type="submit" kind="primary" size="extra-large">
+              <i className="icon icon-search text-white text-[18px] block mt-2px" />
             </Button>
           </form>
         </div>
@@ -59,19 +61,19 @@ const Main = () => {
 
       <Section
         className="section--gradient bg-grey-lightest pt-[51px]"
-        headerClassName="xl:mb-[30px]"
+        headerClassName="2xl:mb-[30px]"
         titleClassName="text-white"
         descriptionClassName="text-white mb-[29px]"
         title="Вакансии"
-        description={<>Вакансии, получившие больше всего<br className="block" /> откликов за неделю</>}
+        description={<>Вакансии, получившие больше всего<br className="block" /> откликов за&nbsp;неделю</>}
       >
         <div className="section__content">
           <nav className="section__nav flex justify-center">
-            <Button className="w-[101px] xl:w-[127px]" textClassName="flex pt-[3px] inline-block" kind="warning" size="small">
+            <Button className="w-[101px] 2xl:w-[127px]" textClassName="flex pt-[3px] inline-block" kind="warning" size="small">
               <i className="icon icon-fire text-[12px] ml-[2px] mr-[6px]"></i>
               Горящие
             </Button>
-            <Button className="w-[101px] xl:w-[127px]" kind="secondary" size="small">
+            <Button className="w-[101px] 2xl:w-[127px]" kind="secondary" size="small">
               Новые
             </Button>
           </nav>
@@ -102,7 +104,7 @@ const Main = () => {
                     </Paragraph>
                   </div>
                   <footer className="card__footer">
-                    <Button className="font-roboto uppercase min-w-[96px] xl:min-w-[110px]" kind="primary-outline" size="extra-small">
+                    <Button className="font-roboto uppercase min-w-[96px] 2xl:min-w-[110px]" kind="primary-outline" size="extra-small">
                       Подробнее
                     </Button>
                   </footer>
@@ -110,7 +112,7 @@ const Main = () => {
               </article>
             ))}
           </section>
-          <footer className="section__footer mb-[60px]">
+          <footer className="section__footer mb-[60px] hidden">
             <Button className="min-w-[252px]" kind="primary-outline" size="large">
               Найти больше вакансий
             </Button>
@@ -119,7 +121,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="bg-grey-lightest"
+        className="bg-grey-lightest hidden"
         title="Узнай все о городе своей мечты"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -155,7 +157,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="section--gradient bg-grey-lightest"
+        className="section--gradient bg-grey-lightest hidden"
         title="Всё о релокейте"
         description="Как подготовить себя и семью к переезду, что нужно знать о жизни в новом городе, как подготовится к собеседованию"
       >
@@ -186,7 +188,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className=""
+        className="hidden"
         title="Блог"
         description="Наши эксперты помогут вам своими лучшими статьями"
       >
@@ -220,7 +222,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className=""
+        className="hidden"
         title="Хочешь получать лучшие статьи от Aitrelocate раз в неделю?"
         description="Подпишись на рассылку Aitrelocate"
       >
@@ -239,7 +241,7 @@ const Main = () => {
       </Section>
 
       <Section
-        className="bg-grey-lightest"
+        className="bg-grey-lightest hidden"
         title="Что о нас говорят"
       >
         <div className="slider">
@@ -275,7 +277,7 @@ const Main = () => {
             ))}
           </div>
         </div>
-        <footer className="section__footer">
+        <footer className="section__footer hidden">
           <Button className="min-w-[252px]" kind="primary-outline" size="large">
             Читать все отзывы
           </Button>
